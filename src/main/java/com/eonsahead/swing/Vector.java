@@ -43,6 +43,17 @@ public class Vector {
                 return -1;
         }//switch (choice)
     } //get (int)
+    
+    public void set( int index, double value ) {
+        this.elements[index] = value;
+    } // set( int, double )
+    
+    public void set( Vector v ) {
+        this.elements[0] = v.elements[0];
+        this.elements[1] = v.elements[1];
+        this.elements[2] = v.elements[2];
+        this.elements[3] = v.elements[3];
+    } // set( Vector )
         
     public Vector normalize(){
         double length = this.magnitude();

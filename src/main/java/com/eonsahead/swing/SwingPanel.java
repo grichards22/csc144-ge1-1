@@ -93,33 +93,33 @@ public class SwingPanel extends JPanel implements ActionListener {
         
     } // paintComponent( Graphics )
 
-    private Shape makeStar(int points,
-            double centerX, double centerY,
-            double minorRadius, double majorRadius) {
-
-        GeneralPath star = new GeneralPath();
-
-        double x = centerX + majorRadius * Math.cos(0.0);
-        double y = centerY + majorRadius * Math.sin(0.0);
-        star.moveTo(x, y);
-        for (int i = 1; i < 2 * points; i++) {
-            double fraction = ((double) i) / (2 * points);
-            double angle = 2.0 * Math.PI * fraction;
-
-            if (i % 2 == 0) {
-                x = centerX + majorRadius * Math.cos(angle);
-                y = centerY + majorRadius * Math.sin(angle);
-            } // if
-            else {
-                x = centerX + minorRadius * Math.cos(angle);
-                y = centerY + minorRadius * Math.sin(angle);
-            } // else
-            star.lineTo(x, y);
-        } // for
-        star.closePath();
-
-        return star;
-    } // makeStar()
+//    private Shape makeStar(int points,
+//            double centerX, double centerY,
+//            double minorRadius, double majorRadius) {
+//
+//        GeneralPath star = new GeneralPath();
+//
+//        double x = centerX + majorRadius * Math.cos(0.0);
+//        double y = centerY + majorRadius * Math.sin(0.0);
+//        star.moveTo(x, y);
+//        for (int i = 1; i < 2 * points; i++) {
+//            double fraction = ((double) i) / (2 * points);
+//            double angle = 2.0 * Math.PI * fraction;
+//
+//            if (i % 2 == 0) {
+//                x = centerX + majorRadius * Math.cos(angle);
+//                y = centerY + majorRadius * Math.sin(angle);
+//            } // if
+//            else {
+//                x = centerX + minorRadius * Math.cos(angle);
+//                y = centerY + minorRadius * Math.sin(angle);
+//            } // else
+//            star.lineTo(x, y);
+//        } // for
+//        star.closePath();
+//
+//        return star;
+//    } // makeStar()
     
     @Override
     public void actionPerformed(ActionEvent event) {

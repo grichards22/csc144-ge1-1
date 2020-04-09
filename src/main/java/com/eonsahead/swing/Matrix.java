@@ -117,7 +117,7 @@ public class Matrix {
         System.out.println("net rotation = " + netRotation);
     } // main( String [] )
 
-    public void scale(float x, float y, float z) {
+    public void scale(double x, double y, double z) {
         for (int i = 0; i <4; i++){
             this.set(i, 0, this.elements[i][0] * x);
         }
@@ -129,9 +129,12 @@ public class Matrix {
         }
     }
 
-    public void translate(float x, float y, float z) {
-        //Assignment says to set matrix elements but shouldn't this set a vector?
-    }
+    public void translate(double deltaX, double deltaY, double deltaZ) {
+        this.identity();
+        this.set(0, 3, deltaX);
+        this.set(1, 3, deltaY);
+        this.set(2, 3, deltaZ);
+    } // translate( double, double, double )
 
     public Vector multiply(Vector v) {
         double resultX = 0.0;
