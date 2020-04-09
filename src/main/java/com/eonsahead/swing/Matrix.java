@@ -127,7 +127,7 @@ public class Matrix {
         for (int i = 0; i <4; i++){
             this.set(i, 2, this.elements[i][2] * z);
         }
-    }
+    } //scale(double, double, double)
 
     public void translate(double deltaX, double deltaY, double deltaZ) {
         this.identity();
@@ -154,6 +154,6 @@ public class Matrix {
             resultH += this.elements[3][j]; //Not used?
         }
         return new Vector(resultX, resultY, resultZ);
-    }
+    } //multiply(Vector)
 
 } // Matrix
